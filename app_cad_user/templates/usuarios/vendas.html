@@ -1,0 +1,24 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+  <div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>serviço</th>
+            <th>valor</th>
+            <th>cliente</th>
+            <th>data</th>
+        </tr>
+        {% for venda in vendas %}
+        <tr>
+            <td>{{venda.id_venda}}</td>
+            <td>{{venda.serviço}}</td>
+            <td>{{venda.valor}}</td>
+            <td>{{venda.cliente}}</td>
+            <td>{{venda.data}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

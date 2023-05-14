@@ -1,0 +1,14 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+      <form action="{% url 'listagem_vendas' %}" method="post">
+        {% csrf_token %}
+        <div style="text-align: center;" class="container">
+            <h1> Cadastro de Realização de serviços</h1>
+            Serviço: <input name="servico" class="form-control-sm" type="text">
+            Valor: <input name="valor" class="form-control-sm" type="text">
+            Cliente: <input name="cliente" class="form-control-sm" type="text">
+            Data: <input name="data" class="form-control-sm" type="text">
+            <button class="form-control-sm">Enviar</button>
+          </div>
+      </form>
+{% endblock %}
